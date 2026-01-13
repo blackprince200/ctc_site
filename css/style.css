@@ -385,6 +385,136 @@ footer {
   font-size: 14px;
   color: #b0bec5;
 }
+.team-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+/* IMAGE */
+.team-card img {
+  width: 40%;
+  border-radius: 50%;
+  margin-bottom: 25px;
+ 
+  object-position: center 30%;
+
+}
+
+/* CONTENT */
+.card-content h3,
+.card-content span,
+.card-content p {
+  color: #fff;
+}
+
+/* HOLOGRAM GLOW BORDER */
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 20%,
+    transparent 80%
+  );
+  opacity: 0;
+  transition: 0.5s;
+}
+
+/* SCANNING LIGHT */
+.team-card::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+}
+
+/* OVERLAY */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+/* HOVER EFFECTS */
+.team-card:hover {
+  transform: rotateX(8deg)  scale(1.1);
+}
+
+.team-card:hover::before {
+  opacity: 0;
+}
+
+.team-card:hover::after {
+  animation: scan 1.5s linear;
+  opacity: 0;
+}
+
+.team-card:hover .card-overlay {
+  opacity: 0;
+}
+
+/* SCAN ANIMATION */
+@keyframes scan {
+  from { top: -100%; }
+  to { top: 100%; }
+}
+.team-card:hover {
+  border-color: #7CFC00;
+  box-shadow:
+    0 0 10px #2ecc71,
+    0 0 25px rgba(255, 79, 216, 0.2);
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.social-icons img {
+  width: 18px;
+  height: 18px;
+}
+
+.social-icons a:hover {
+  background: #ff3cac; /* pink hover */
+}
+
+
 
 /* ACTIVE NAV LINK */
 

@@ -17,40 +17,110 @@
 <section class="team-hero">
   <h1>Meet the Core Team</h1>
   <p>The people driving innovation, collaboration, and growth at CTC.</p>
+<section class="team-grid" id="teamGrid">
+  
+  <script>
+const teamMembers = [
+  {
+    img: "assets/team/ansh.jpeg",
+    name: "Ansh Verma",
+    role: "President & cyber security Lead",
+    linkedin: "https://www.linkedin.com/in/ansh-verma",
+    github: "https://github.com/anshverma"
+    
+  },
+  {
+    img: "assets/team/Akash.jpeg",
+    name: "Akash",
+    role: "App Development Lead",
+    linkedin: "https://www.linkedin.com/in/akash-giri-183a21300",
+    github: "https://github.com/blackprince200"
+    
+  },
+  {
+    img: "assets/team/hariom.jpeg",
+    name: "Hariom Dubey",
+    role: "Web Development Lead",
+    linkedin: "https://www.linkedin.com/in/ansh-verma",
+    github: "https://github.com/anshverma"
+   
+  },
+  {
+    img: " assets/team/Pradeep.jpeg",
+    name: "Pradeep Kumar",
+    role: "App & Web Developer",
+   linkedin: "https://www.linkedin.com/in/ansh-verma",
+    github: "https://github.com/anshverma"
+  },
+    {
+    img: "assets/team/vaibhav.jpeg",
+    name: "Vaibhav Agraval",
+    role: "DevOps Engineer",
+    linkedin: "https://www.linkedin.com/in/ansh-verma",
+    github: "https://github.com/anshverma"
+  },
+  
+  {
+    img: "assets/team/akash_pandey.jpeg",
+    name: "Akash Pandey",
+    role: "Cybersecurity Lead",
+    linkedin: "https://www.linkedin.com/in/ansh-verma",
+    github: "https://github.com/anshverma"
+  },
+  {
+    img: "assets/team/sailesh.jpeg",
+    name: "Shailesh",
+    role: "UI/UX Designer",
+    linkedin: "https://www.linkedin.com/in/ansh-verma",
+    github: "https://github.com/anshverma"
+  },
+  {
+    img: "assets/team/shreya.jpeg",
+    name: "Shreya Tripathi",
+    role: "Content & Outreach Head",
+    linkedin: "https://www.linkedin.com/in/ansh-verma",
+    github: "https://github.com/anshverma"
+  },
+   {
+    img: "assets/team/subh.jpeg",
+    name: "Shubh Seth",
+    role: "Ai & Ml lead",
+   linkedin: "https://www.linkedin.com/in/ansh-verma",
+    github: "https://github.com/anshverma"
+   
+  },
+
+  {
+    img: "assets/team/pritesh.jpeg",
+    name: "Pritesh Mishra",
+    role: "Student Coordinator",
+   linkedin: "https://www.linkedin.com/in/ansh-verma",
+    github: "https://github.com/anshverma"
+  },
+   {
+    img: "assets/team/shashikant.jpeg",
+    name: "Shashikant Singh",
+    role: "Content & Outreach Head",
+    linkedin: "https://www.linkedin.com/in/ansh-verma",
+    github: "https://github.com/anshverma"
+  },
+];
+
+const grid = document.getElementById("teamGrid");
+
+teamMembers.forEach(member => {
+  grid.innerHTML += `
+    <div class="team-card">
+      <img src="${member.img}" alt="${member.name}">
+      <h3>${member.name}</h3>
+      <span>${member.role}</span>
+    </div>
+  `;
+});
+</script>
+
 </section>
 
-<!-- TEAM GRID -->
-<section class="team-grid">
-
-  <div class="team-card">
-    <img src="assets/akash.png" alt="Team Member">
-    <h3>Alex Johnson</h3>
-    <span>Founder & Lead Architect</span>
-    <p>Oversees CTC’s vision, technical direction, and community strategy.</p>
-  </div>
-
-  <div class="team-card">
-    <img src="assets/akash.png" alt="Team Member">
-    <h3>Priya Sharma</h3>
-    <span>AI & ML Lead</span>
-    <p>Leads AI initiatives, workshops, and research-driven projects.</p>
-  </div>
-
-  <div class="team-card">
-    <img src="assets/akash.png" alt="Team Member">
-    <h3>Daniel Lee</h3>
-    <span>Web Development Lead</span>
-    <p>Mentors web teams and manages frontend/backend projects.</p>
-  </div>
-
-  <div class="team-card">
-    <img src="assets/akash.png" alt="Team Member">
-    <h3>Sophia Martinez</h3>
-    <span>Community & Events Manager</span>
-    <p>Organizes meetups, hackathons, and community outreach.</p>
-  </div>
-
-</section>
 
 <!-- FOOTER -->
 <div id="footer"></div>
