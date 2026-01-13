@@ -404,7 +404,7 @@ footer {
   }
 }
 
-/* ================= SHOWCASE PAGE ================= */
+/* ================= SHOWCASE HERO ================= */
 
 .showcase-hero {
   text-align: center;
@@ -421,7 +421,7 @@ footer {
   color: #b0bec5;
 }
 
-/* FILTER */
+/* ================= FILTER ================= */
 
 .showcase-filter {
   display: flex;
@@ -447,82 +447,177 @@ footer {
   color: #000;
 }
 
-/* GRID */
+/* ================= FEATURED SHOWCASE ================= */
 
-.showcase-grid {
+.showcase-list {
   max-width: 1200px;
   margin: auto;
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-/* PROJECT CARD */
-
-.project-card {
-  background: rgba(255,255,255,0.03);
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(120,255,160,0.4);
+  padding: 60px 40px;
   display: flex;
   flex-direction: column;
+  gap: 50px;
 }
 
-.project-card img {
+/* ================= CARD (FIXED HEIGHT) ================= */
+
+.showcase-item {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  padding: 32px;
+  height: 520px;              /* ✅ FIXED CARD HEIGHT */
+  border-radius: 22px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(0,0,0,0.6)
+  );
+
+  border: 1px solid rgba(107,255,142,0.35);
+
+  box-shadow:
+    0 0 0 1px rgba(107,255,142,0.12),
+    0 0 80px rgba(107,255,142,0.1);
+}
+
+/* ================= IMAGE ================= */
+
+.showcase-image {
+  position: relative;
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 100%;               /* ✅ MATCH CARD HEIGHT */
+  overflow: hidden;
+  border-radius: 16px;
 }
 
-.project-content {
-  padding: 20px;
-}
-
-.project-content h3 {
-  margin-bottom: 6px;
-}
-
-.project-content span {
-  font-size: 13px;
-  color: #6bff8e;
+.showcase-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;      /* ✅ SHOW FULL IMAGE */
+  background: #000;       /* ✅ NO DISTORTION */
+  border-radius: 16px;
   display: block;
-  margin-bottom: 10px;
 }
 
-.project-content p {
-  font-size: 14px;
-  color: #b0bec5;
-  margin-bottom: 14px;
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2;
 }
 
-.project-btn {
-  font-size: 13px;
-  font-weight: 600;
-  background: linear-gradient(90deg, #6bff8e, #36ffb2);
+.slide-btn.prev {
+  left: 10px;
+}
+
+.slide-btn.next {
+  right: 10px;
+}
+
+.slide-btn:hover {
+  background: rgba(107,255,142,0.9);
   color: #000;
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  align-self: flex-start;
 }
 
-/* ACTIVE NAV */
+/* ================= CONTENT ================= */
 
-.nav a.active {
-  color: #ffffff;
+.showcase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ✅ BALANCED CONTENT */
 }
 
-.nav a.active::after {
-  width: 100%;
+.showcase-content h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #6bff8e;
+  margin-bottom: 16px;
 }
 
-/* RESPONSIVE */
+.showcase-meta {
+  display: flex;
+  gap: 22px;
+  font-size: 14px;
+  color: #9fb3a9;
+  margin-bottom: 18px;
+}
+
+.showcase-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cfd8dc;
+  margin-bottom: 20px;
+}
+
+/* ================= SOCIAL ICONS ================= */
+
+.showcase-social {
+  display: flex;
+  gap: 18px;
+}
+
+.showcase-social a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(107,255,142,0.35);
+  transition: 0.3s;
+}
+
+.showcase-social a:hover {
+  background: linear-gradient(90deg, #6bff8e, #36ffb2);
+  box-shadow: 0 0 20px rgba(107,255,142,0.5);
+}
+
+.showcase-social img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .showcase-item {
+    grid-template-columns: 1fr;
+    height: 520px;            /* FIXED HEIGHT FOR MOBILE */
+  }
+
+  .showcase-content h2 {
+    font-size: 32px;
+  }
+}
 
 @media (max-width: 600px) {
   .showcase-hero h1 {
     font-size: 36px;
   }
+}
+
+/* ================= SCROLL REVEAL ANIMATION ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
