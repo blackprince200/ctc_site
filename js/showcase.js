@@ -1,6 +1,6 @@
 const showcaseData = [
-    {
-    title: "tHub & HTML/CSS Workshops",
+  {
+    title: "Git/GitHub & HTML/CSS Workshops",
     category: "event",
     images: [
       "assets/show/event4_1.jpeg",
@@ -59,7 +59,7 @@ const showcaseData = [
   },
   {
     title: "CTC INTRODUCTION",
-    category: "",
+    category: "event",   // ✅ FIXED (was empty)
     images: [
       "assets/show/event1_1.jpeg",
       "assets/show/event1_2.jpeg",
@@ -82,7 +82,7 @@ const showcaseData = [
 const container = document.getElementById("showcaseList");
 const filterButtons = document.querySelectorAll(".showcase-filter button");
 
-/* ================= RENDER FUNCTION ================= */
+/* ================= RENDER ================= */
 
 function renderShowcase(filter = "all") {
   const filteredData =
@@ -94,18 +94,15 @@ function renderShowcase(filter = "all") {
     .map(item => `
       <article class="showcase-item reveal">
         <div class="showcase-image">
-  <button class="slide-btn prev">‹</button>
-
-  <img 
-    src="${item.images[0]}" 
-    alt="${item.title}"
-    data-images='${JSON.stringify(item.images)}'
-    data-index="0"
-  >
-
-  <button class="slide-btn next">›</button>
-</div>
-
+          <button class="slide-btn prev">‹</button>
+          <img 
+            src="${item.images[0]}"
+            alt="${item.title}"
+            data-images='${JSON.stringify(item.images)}'
+            data-index="0"
+          >
+          <button class="slide-btn next">›</button>
+        </div>
 
         <div class="showcase-content">
           <h2>${item.title}</h2>
@@ -119,13 +116,13 @@ function renderShowcase(filter = "all") {
 
           <div class="showcase-social">
             <a href="${item.socials.youtube}" target="_blank">
-              <img src="assets/show/youtube.svg" alt="YouTube">
+              <img src="assets/show/youtube.svg">
             </a>
             <a href="${item.socials.instagram}" target="_blank">
-              <img src="assets/show/instagram.svg" alt="Instagram">
+              <img src="assets/show/instagram.svg">
             </a>
             <a href="${item.socials.linkedin}" target="_blank">
-              <img src="assets/show/linkedIN.svg" alt="LinkedIn">
+              <img src="assets/show/linkedIN.svg">
             </a>
           </div>
         </div>
@@ -133,59 +130,33 @@ function renderShowcase(filter = "all") {
     `)
     .join("");
 
-  startSlideshows();
+  observeReveals(); // ✅ REQUIRED
 }
 
-/* ================= FILTER HANDLING ================= */
+/* ================= FILTER ================= */
 
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
     filterButtons.forEach(btn => btn.classList.remove("active"));
     button.classList.add("active");
-
-    const filter = button.dataset.filter;
-    renderShowcase(filter);
+    renderShowcase(button.dataset.filter);
   });
 });
 
-/* ================= SLIDESHOW ================= */
-
-function startSlideshows() {
-  const images = document.querySelectorAll(".showcase-image img");
-
-  images.forEach(img => {
-    const imageList = JSON.parse(img.dataset.images);
-    if (imageList.length <= 1) return;
-
-    setInterval(() => {
-      let index = Number(img.dataset.index);
-      index = (index + 1) % imageList.length;
-
-      img.src = imageList[index];
-      img.dataset.index = index;
-    }, 3000);
-  });
-}
-
-/* ================= INITIAL LOAD ================= */
-
-renderShowcase();
+/* ================= SLIDER (MANUAL ONLY) ================= */
 
 document.addEventListener("click", function (e) {
   if (!e.target.classList.contains("slide-btn")) return;
 
-  const btn = e.target;
-  const container = btn.closest(".showcase-image");
+  const container = e.target.closest(".showcase-image");
   const img = container.querySelector("img");
 
   const images = JSON.parse(img.dataset.images);
   let index = Number(img.dataset.index);
 
-  if (btn.classList.contains("next")) {
-    index = (index + 1) % images.length;
-  } else {
-    index = (index - 1 + images.length) % images.length;
-  }
+  index = e.target.classList.contains("next")
+    ? (index + 1) % images.length
+    : (index - 1 + images.length) % images.length;
 
   img.src = images[index];
   img.dataset.index = index;
@@ -202,12 +173,16 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.15
-  }
+  { threshold: 0.15 }
 );
 
-document.querySelectorAll(".reveal").forEach(el => {
-  revealObserver.observe(el);
-});
+function observeReveals() {
+  document.querySelectorAll(".reveal").forEach(el => {
+    revealObserver.observe(el);
+  });
+}
 
+/* ================= INIT ================= */
+
+renderShowcase();
+observeReveals();
