@@ -116,13 +116,13 @@ function renderShowcase(filter = "all") {
 
           <div class="showcase-social">
             <a href="${item.socials.youtube}" target="_blank">
-              <img src="assets/show/youtube.svg">
+              <img src="assets/icon/youtube.svg">
             </a>
             <a href="${item.socials.instagram}" target="_blank">
-              <img src="assets/show/instagram.svg">
+              <img src="assets/icon/instagram.svg">
             </a>
             <a href="${item.socials.linkedin}" target="_blank">
-              <img src="assets/show/linkedIN.svg">
+              <img src="assets/icon/linkedIN.svg">
             </a>
           </div>
         </div>
