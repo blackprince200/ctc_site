@@ -33,8 +33,8 @@ const showcaseData = [
     description:
       "📱✨ CTC’s App Development Workshop – Highlights Students explored:, Basics of Android app development, UI design fundamentals, Hands-on coding with real componentsThe session was interactive, engaging, and a great step toward strengthening our tech community at REC Sonbhadra. ",
     socials: {
-      youtube: "https://youtube.com/shorts/CX1s89gZCVM?si=eKzhnnyrUmfBc-pk",
-      instagram: "https://www.instagram.com/p/DRh3fI5gHfY/?igsh=c3hoaTBya25rc2U3",
+      youtube: "https://youtube.com/shorts/CX1s89gZCVM",
+      instagram: "https://www.instagram.com/p/DRh3fI5gHfY/",
       linkedin: "https://www.linkedin.com/posts/community-for-technology-and-coding_ctcrecs-appdevelopment-androiddevelopment-activity-7399516223702507521-ajoC?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAE_FYWEBGp6qayhK5WWmYAgQN4jaM65f0nM&utm_campaign=copy_link"
     }
   },
@@ -52,8 +52,8 @@ const showcaseData = [
     description:
       "The workshop introduced students to the foundations of programming while enabling hands-on practice and peer learning.A great learning experience and an excellent start to our journey of technical growth.Looking forward to more such workshops and a thriving coding community at REC Sonbhadra.Code. Connect. Create.",
     socials: {
-      youtube: "https://youtube.com/shorts/ebtmhvSOIa0?si=6TVjBh9DMjE324Gw",
-      instagram: "https://www.instagram.com/p/DRNXmbjgPsk/?igsh=a3hnaTJjMWY5dWRq",
+      youtube: "https://youtube.com/shorts/ebtmhvSOIa0",
+      instagram: "https://www.instagram.com/p/DRNXmbjgPsk/",
       linkedin: "https://www.linkedin.com/posts/community-for-technology-and-coding_ctcrecs-ctc-cprogramming-activity-7396628493788278785-0V5W?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAE_FYWEBGp6qayhK5WWmYAgQN4jaM65f0nM&utm_campaign=copy_link"
     }
   },
@@ -72,8 +72,8 @@ const showcaseData = [
     description:
       "A strong coding culture is essential for a tech-driven campus. With this vision, students of B.Tech CSE (3rd year) at Rajkiya Engineering College, Sonbhadra founded CTC – Community for Technology and Coding.Supported by our batchmates and faculty coordinator Mr. Anurag Sewak, CTC aims to create a collaborative ecosystem for learning, innovation, and growth through workshops, hackathons, contests, and hands-on projects.",
     socials: {
-      youtube: "https://youtube.com/shorts/CX1s89gZCVM?si=eKzhnnyrUmfBc-pk",
-      instagram: "https://www.instagram.com/p/DRNTkT_Ek0A/?igsh=MXA4bWwya2d4NmN1dA%3D%3D",
+      youtube: "https://youtube.com/shorts/CX1s89gZCVM",
+      instagram: "https://www.instagram.com/p/DRNTkT_Ek0A/",
       linkedin: "https://www.linkedin.com/posts/community-for-technology-and-coding_ctc-codingclub-recsonbhadra-activity-7396620389327593472-tVcA?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAE_FYWEBGp6qayhK5WWmYAgQN4jaM65f0nM&utm_campaign=copy_link"
     }
   }
