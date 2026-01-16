@@ -1,0 +1,237 @@
+/* ================= HERO ================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  padding: 80px;
+  gap: 40px;
+  animation: heroFadeIn 0.8s var(--transition-smooth) 0.2s both;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  animation: titleSlideUp 0.8s var(--transition-smooth) 0.3s both;
+}
+
+@keyframes titleSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 35px;
+  animation: fadeInUp 0.8s var(--transition-smooth) 0.4s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  padding: 16px 32px;
+  background: linear-gradient(90deg, #4cff6a, #1ed760);
+  color: #000;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s var(--transition-smooth);
+  animation: buttonPopIn 0.6s var(--transition-smooth) 0.5s both;
+}
+
+@keyframes buttonPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 20px rgba(107,255,142,0.5);
+}
+
+/* ================= SPHERE ================= */
+#sphereContainer {
+  width: 420px;
+  height: 420px;
+  margin: auto;
+  animation: sphereFloat 3s ease-in-out infinite;
+}
+
+@keyframes sphereFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ================= CARDS ================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0 80px 80px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(120,255,160,0.4);
+  background: var(--bg-glass);
+  transition: all 0.3s var(--transition-smooth);
+  animation: cardSlideUp 0.6s var(--transition-smooth) both;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes cardSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(107,255,142,0.2);
+}
+
+.card p {
+  color: var(--text-muted);
+}
+
+/* ================= HOME PAGE RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 60px 40px;
+  }
+
+  .cards {
+    padding: 0 40px 60px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  #sphereContainer {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 60px 30px;
+  }
+
+  #sphereContainer {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    padding: 0 30px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cards {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  #sphereContainer {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
