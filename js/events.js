@@ -2,10 +2,10 @@ const UPCOMING_EVENTS = [
     {
         id: 1,
         type: "upcoming",
-        date: "14",
-        month: "FEB",
+        date: "28",
+        month: "MAR",
         title: "IoT Workshop: Smart Devices & Sensors",
-        time: "10:00 PM – 12:00 PM",
+        time: "10:00 AM – 12:00 PM",
         venue: "AB-2, G-6",
         tag: "workshop",
         tagText: "IoT Workshop",
@@ -25,8 +25,8 @@ const UPCOMING_EVENTS = [
     {
         id: 2,
         type: "upcoming",
-        date: "21",
-        month: "FEB",
+        date: "04",
+        month: "APR",
         title: "Web Development",
         time: "10:00 PM – 12:00 PM",
         venue: "AB-2, G-6",
@@ -127,7 +127,6 @@ const PAST_EVENTS = [
     }
 ];
 
-// Combine for compatibility with existing code
 const eventsData = [...UPCOMING_EVENTS, ...PAST_EVENTS];
 
 /* ================= RENDER FUNCTIONS ================= */
@@ -293,7 +292,6 @@ document.addEventListener('click', function(e) {
         const event = eventsData.find(e => e.id == eventId);
         
         if (event) {
-            // Only prevent default if there's no registration link
             if (!event.registrationLink) {
                 e.preventDefault();
                 
@@ -301,11 +299,8 @@ document.addEventListener('click', function(e) {
                 setTimeout(() => {
                     btn.style.transform = '';
                 }, 150);
-                
-                // Show alert for events without registration link (past events)
                 alert(`Registration for: ${event.title}\n\nDate: ${event.month} ${event.date}\nTime: ${event.time}\nVenue: ${event.venue}\n\nRegistration is closed for this event.`);
             }
-            // If registration link exists, it will open automatically (no need for preventDefault)
         }
     }
 });

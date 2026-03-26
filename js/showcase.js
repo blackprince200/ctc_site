@@ -59,7 +59,7 @@ const showcaseData = [
   },
   {
     title: "CTC INTRODUCTION",
-    category: "event",   // ✅ FIXED (was empty)
+    category: "event",   
     images: [
       "assets/show/event1_1.jpeg",
       "assets/show/event1_2.jpeg",
@@ -130,7 +130,7 @@ function renderShowcase(filter = "all") {
     `)
     .join("");
 
-  observeReveals(); // ✅ REQUIRED
+  observeReveals(); //  REQUIRED
 }
 
 /* ================= FILTER ================= */

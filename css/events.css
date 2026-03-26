@@ -1,8 +1,4 @@
 /* ================= EVENTS PAGE STYLES ================= */
-/* 
-   To customize colors, edit the --primary and --accent variables
-   For card sizes, adjust the minmax values in grid-template-columns
-*/
 
 :root {
     --primary: #6bff8e;

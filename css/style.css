@@ -274,7 +274,7 @@ html {
 
 /* -------- TABLET (601px to 900px) -------- */
 @media (max-width: 900px) {
-  /* HEADER */
+
   .header-inner {
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;

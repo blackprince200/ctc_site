@@ -1,10 +1,7 @@
 // Global JavaScript for CTC Website
 document.addEventListener('DOMContentLoaded', function() {
-    // Page loading animation
     const body = document.body;
     const currentPage = body.getAttribute('data-page');
-    
-    // Add page-specific class for styling
     if (currentPage) {
         body.classList.add(`page-${currentPage}`);
     }
