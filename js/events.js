@@ -28,7 +28,7 @@ const UPCOMING_EVENTS = [
         date: "04",
         month: "APR",
         title: "Web Development",
-        time: "10:00 PM – 12:00 PM",
+        time: "10:00 AM – 12:00 PM",
         venue: "AB-2, G-6",
         tag: "workshop",
         tagText: "Web Development",
