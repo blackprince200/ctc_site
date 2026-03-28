@@ -44,7 +44,7 @@ const UPCOMING_EVENTS = [
             level: "Intermediate to Advance ",
             topics: "REACT,CSS,HTML"
         },
-        registrationLink: "https://docs.google.com/forms/d/YOUR_WEB_DEVELOPMENT_FORM_ID"
+        registrationLink: "https://luma.com/e3f4jxut"
     },
 ];
 
