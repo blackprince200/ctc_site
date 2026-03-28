@@ -1,29 +1,29 @@
 const UPCOMING_EVENTS = [
+    // {
+    //     id: 1,
+    //     type: "upcoming",
+    //     date: "28",
+    //     month: "MAR",
+    //     title: "IoT Workshop: Smart Devices & Sensors",
+    //     time: "10:00 AM – 12:00 PM",
+    //     venue: "AB-2, G-6",
+    //     tag: "workshop",
+    //     tagText: "IoT Workshop",
+    //     description: "Learn to build smart devices with Arduino and Raspberry Pi. Hands-on experience with sensors, actuators, and IoT protocols.",
+    //     speaker: {
+    //         name: "Vaibhav Agarwal",
+    //         role: "IoT Specialist",
+    //         avatar: "VA",
+    //     },
+    //     details: {
+    //         seats: "50",
+    //         level: "Beginner to Intermediate",
+    //         topics: "Arduino, Sensors, MQTT"
+    //     },
+    //     registrationLink: "https://luma.com/e3f4jxut"
+    // },
     {
         id: 1,
-        type: "upcoming",
-        date: "28",
-        month: "MAR",
-        title: "IoT Workshop: Smart Devices & Sensors",
-        time: "10:00 AM – 12:00 PM",
-        venue: "AB-2, G-6",
-        tag: "workshop",
-        tagText: "IoT Workshop",
-        description: "Learn to build smart devices with Arduino and Raspberry Pi. Hands-on experience with sensors, actuators, and IoT protocols.",
-        speaker: {
-            name: "Vaibhav Agarwal",
-            role: "IoT Specialist",
-            avatar: "VA",
-        },
-        details: {
-            seats: "50",
-            level: "Beginner to Intermediate",
-            topics: "Arduino, Sensors, MQTT"
-        },
-        registrationLink: "https://luma.com/e3f4jxut"
-    },
-    {
-        id: 2,
         type: "upcoming",
         date: "04",
         month: "APR",
@@ -49,6 +49,26 @@ const UPCOMING_EVENTS = [
 ];
 
 const PAST_EVENTS = [
+    {
+        id: 105,
+        type: "past",
+        title: "IoT Workshop: Smart Devices & Sensors",
+        date: "28 MAR 2026",
+        time: "2:30 PM",
+        venue: "REC Sonbhadra, AB2 G6",
+        image: "assets/event/event_5.jpeg",
+        description: "Learn to build smart devices with Arduino and Raspberry Pi. Hands-on experience with sensors, actuators, and IoT protocols.",
+        speaker: {
+            name: "Vaibhav Agarwal",
+            role: "IoT Specialist",
+            avatar: "VA",
+        },
+        stats: {
+            attendees: "30+",
+            duration: "1.3 Hours"
+        }
+    },
+
     {
         id: 104,
         type: "past",
