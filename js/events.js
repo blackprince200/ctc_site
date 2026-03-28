@@ -20,7 +20,7 @@ const UPCOMING_EVENTS = [
             level: "Beginner to Intermediate",
             topics: "Arduino, Sensors, MQTT"
         },
-        registrationLink: "https://docs.google.com/forms/d/YOUR_IOT_WORKSHOP_FORM_ID"
+        registrationLink: "https://luma.com/e3f4jxut"
     },
     {
         id: 2,
@@ -44,7 +44,7 @@ const UPCOMING_EVENTS = [
             level: "Intermediate to Advance ",
             topics: "REACT,CSS,HTML"
         },
-        registrationLink: "https://luma.com/e3f4jxut"
+        registrationLink: "https://docs.google.com/forms/d/YOUR_WEB_DEVELOPMENT_FORM_ID"
     },
 ];
 
