@@ -40,7 +40,7 @@ const UPCOMING_EVENTS = [
             avatarClass: "web-avatar"
         },
         details: {
-            seats: "50",
+            seats: "100",
             level: "Intermediate to Advance ",
             topics: "REACT,CSS,HTML"
         },
