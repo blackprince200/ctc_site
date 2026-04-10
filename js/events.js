@@ -25,7 +25,7 @@ const UPCOMING_EVENTS = [
     {
         id: 1,
         type: "upcoming",
-        date: "04",
+        date: "11",
         month: "APR",
         title: "Web Development",
         time: "10:00 AM – 12:00 PM",
@@ -44,7 +44,7 @@ const UPCOMING_EVENTS = [
             level: "Intermediate to Advance ",
             topics: "REACT,CSS,HTML"
         },
-        registrationLink: "https://docs.google.com/forms/d/YOUR_WEB_DEVELOPMENT_FORM_ID"
+        registrationLink: "https://luma.com/y5gpys13"
     },
 ];
 
