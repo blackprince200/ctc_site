@@ -22,33 +22,29 @@ const UPCOMING_EVENTS = [
     //     },
     //     registrationLink: "https://luma.com/e3f4jxut"
     // },
+   
+];
+
+const PAST_EVENTS = [
     {
-        id: 1,
-        type: "upcoming",
-        date: "11",
-        month: "APR",
+        id: 106,
+        type: "past",
         title: "Web Development",
-        time: "10:00 AM – 12:00 PM",
-        venue: "AB-2, G-6",
-        tag: "workshop",
-        tagText: "Web Development",
+        date: "11 Apr 2026",
+        time: "10 AM",
+        venue: "REC Sonbhadra, AB2 G6",
+        image: "assets/event/event_6.png",
         description: "Build, deploy, and pitch a complete web product in a team environment. Win exciting prizes and internships!",
         speaker: {
             name: "Hariom Dubey",
             role: "Senior Developer",
             avatar: "HD",
-            avatarClass: "web-avatar"
         },
-        details: {
-            seats: "60",
-            level: "Intermediate to Advance ",
-            topics: "REACT,CSS,HTML"
-        },
-        registrationLink: "https://luma.com/y5gpys13"
+        stats: {
+            attendees: "30+",
+            duration: "1.3 Hours"
+        }
     },
-];
-
-const PAST_EVENTS = [
     {
         id: 105,
         type: "past",
